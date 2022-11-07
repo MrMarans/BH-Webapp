@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <img src="mey-logo.jpg" id="Logo">
+    <img src="Bilder/mey-logo.jpg" id="Logo">
 
     <div id="StartDiv">
         <h1>Willkommen bei der unserer BH Support App</h1>
@@ -21,12 +21,12 @@
             Wir stellen Ihnen anschließend dar, welche Größe
             ideal für Sie ist und präsentieren Ihnen im Anschluss
             unser aktuelles Angebot anhand Ihrer Maße.</p>
-        <button onclick="Hide('StartDiv','Unterbrustumfang')">
+        <button onclick="Hide('StartDiv','Unterbrustumfang'); GifShow('Show')">
             <p class="TextInButton">Lass uns starten</p>
         </button>
     </div>
 
-    <img src="Vorschau.png" id="Gif">
+    <img src="Bilder/Vorschau.png" id="Gif">
     <div id="Unterbrustumfang">
 
 
@@ -59,7 +59,7 @@
         <form>
             <input type="number" id="Unterbrust" placeholder="Weite in mm"><br><br>
         </form>
-        <button onclick="Hide('Oberbrustweite', 'Ergebnis')">
+        <button onclick="Hide('Oberbrustweite', 'Ergebnis'); GifShow('Hide')">
             <p class="TextInButton">Eingabe festlegen</p>
         </button>
         </button>
@@ -81,7 +81,33 @@
         <button onclick="Hide('Ergebnis', 'BH-Finder');">
             <p class="TextInButton">Zum BH-Finder</p>
         </button>
-        </button>
+    </div>
+
+
+    <div id="BH-Finder">
+        <h2 style="text-align: left; margin-left: 5%; margin-top: 5%;">Aktuelle Saison-Produke:</h2>
+        <div class="Artikel">
+            <img src="Bilder/74284-85_detail01_800x1200.jpg" class="PreVis">
+            <div class="Info">
+                <h3 class="ArtikelTitle">Bi-Stretch-BH | Full Cup</h3>
+                <p class="Serie">Serie Luxurious</p>
+                <div class="circles">
+                <div class="ColorCircle" style="background-color: black;"></div>
+                <div class="ColorCircle" style="background-color: red;"></div>
+                <div class="ColorCircle" style="background-color: gold;"></div>
+                <h3 class="price">Ab 69.99€</h3>   
+            </div>
+         
+            </div>
+          
+            
+        </div>
+        <div class="Artikel"></div>
+        <div class="Artikel"></div>
+        <div class="Artikel"></div>
+        <div class="Artikel"></div>
+
+
 
 
     </div>

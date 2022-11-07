@@ -15,3 +15,22 @@ function Show(Show)
     elementShow.style.transition="opacity 500ms";
     elementShow.style.visibility = "visible";
 }
+
+function GifShow(WhatToDo){
+    gif = document.getElementById("Gif");
+
+    if(WhatToDo == "Show")
+    {    setTimeout(() => {
+    gif.style.visibility="visible"; gif.style.opacity="1";
+    gif.style.transition="opacity 500ms";
+}, 500);
+    }
+    else{
+        gif.style.opacity="0";
+        setTimeout(() => {
+        gif.style.visibility="hidden"; 
+     
+    }, 500);
+    }
+
+}
