@@ -34,3 +34,9 @@ function GifShow(WhatToDo){
     }
 
 }
+
+function OpenArticle(Nr){
+  article = document.getElementById(Nr);
+  article.style.zIndex ="500";
+  
+}

@@ -85,9 +85,9 @@ p {
     margin: auto;
     width: 45%;
     text-align: center;
-    opacity: 1;
+    opacity: 0;
     transition: opacity 500ms;
-    visibility: visible;
+    visibility: hidden;
     border-radius: 120px;
     background-color: #E6E6E6;
     right: 3%;
