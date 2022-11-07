@@ -34,6 +34,24 @@ function GifShow(WhatToDo) {
 
 }
 
+var Unterbrust;
+var Oberbrust;
+function BrustInfo(Info)
+{
+    if(Info == "Unterbrust"){
+        Unterbrust = document.getElementById(Info).value;
+    }
+    if(Info=="Oberbrust")
+    {
+        Oberbrust = document.getElementById(Info).value;
+    }
+    if(Oberbrust !=null && Unterbrust!= null)
+    {
+        //hier den Code von Daniela
+    }
+}
+
+
 function OpenArticle(Nr) {
     article = document.getElementById(Nr);
     info = article.querySelector('.Info');
