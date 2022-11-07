@@ -127,13 +127,18 @@ p {
 .Info{
     position: relative;
     margin: auto;
-    height: 100%;
+    height: auto;
     min-width: auto;
+    min-height: 100%;
+    word-wrap:break-word;
+    overflow: hidden;
 }
 
-
 .ArtikelTitle{
+    display: inline-block;
     margin: 0px;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 .Serie{
     color: #707070;
@@ -146,12 +151,14 @@ p {
 
 .circles{
     position: absolute;
-    min-width: 80%;
+    float: left;   
+    vertical-align: bottom; 
+    min-height: auto;
     bottom: 0px;
-    min-width: 100%;
 }
 
 .ColorCircle{
+    position: relative;
     width: 50px;
     height: 50px;
     border-radius: 1000px;
@@ -160,9 +167,11 @@ p {
 }
 
 .price{
-    bottom: 0px;
+    font-size: 2.7em;
+    position: absolute;
+    bottom: 7%;
     margin: 0px;
-    right: 0px;
+    right: 4%;
     float:right;
 }
 
