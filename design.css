@@ -85,9 +85,9 @@ p {
     margin: auto;
     width: 45%;
     text-align: center;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 500ms;
-    visibility: hidden;
+    visibility: visible;
     border-radius: 120px;
     background-color: #E6E6E6;
     right: 3%;
@@ -104,6 +104,20 @@ p {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+/*
+.Artikel{
+    position: relative;
+    border-radius: 60px;
+    background-color: white;
+    margin: 10%;
+    height: 70%;
+    width: auto;
+    padding: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    text-align: left;
+}*/
+
 
 .Artikel{
     position: relative;
@@ -116,14 +130,52 @@ p {
     padding-left: 4%;
     padding-right: 4%;
     text-align: left;
+    overflow: hidden;
+    transition: height 500ms;
 }
 
-.PreVis{
-    max-height: 100%; 
+.ImgDiv{
+    position: relative;
+    width: 20%;
+    height: 100%;
     border-radius: 30px;
     float: left;   
     margin-right: 5%;
+    overflow: hidden;
+    display: flex;
+    transition: width 500ms;
 }
+
+.singleProduct{
+   position: relative;
+   width: 49%;
+   height: 79%;
+   overflow: hidden;
+   margin: auto;
+   margin-top: 6%;
+   border-radius: 70px;
+}
+
+.PreVis{
+    position: absolute;
+    max-height: 100%; 
+    width: auto;
+    border-radius: 30px;
+    left: 50%;
+   top: 50%;
+   -webkit-transform: translateY(-50%) translateX(-50%);  
+}
+
+.SingleProduktIMG{
+    position: absolute;
+    max-height: 100%; 
+    width: auto;
+    border-radius: 30px;
+    left: 50%;
+   top: 50%;
+   -webkit-transform: translateY(-50%) translateX(-50%);  
+}
+
 .Info{
     position: relative;
     margin: auto;
@@ -132,7 +184,14 @@ p {
     min-height: 100%;
     word-wrap:break-word;
     overflow: hidden;
+    transition: min-height 500ms;
 }
+
+/*
+Artikel, height auf 71%
+Info, min height auf 16%
+ImgDiv width: von 20 auf 46%
+*/
 
 .ArtikelTitle{
     display: inline-block;
@@ -169,10 +228,10 @@ p {
 .price{
     font-size: 2.7em;
     position: absolute;
-    bottom: 7%;
-    margin: 0px;
-    right: 4%;
+    bottom: 0px;
+    right: 0px;
     float:right;
+    margin-bottom: 0px;
 }
 
 button {
