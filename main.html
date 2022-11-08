@@ -42,7 +42,7 @@
             Hierfür ziehen Sie das Messband unterhalb Ihrer Brust zusammen. Geben sie den Brustumfang anschließend in
             dem Textfeld ein.</p>
         <form style="margin-top: 150px;">
-            <input type="number" id="Unterbrust" placeholder="Weite in mm"><br><br>
+            <input type="number" id="Unterbrust" placeholder="Weite in cm"><br><br>
         </form>
         <button onclick="Hide('Unterbrustumfang','Oberbrustweite'); BrustInfo('Unterbrust')">
             <p class="TextInButton">Eingabe festlegen</p>
@@ -61,7 +61,7 @@
             anschließend in dem Textfeld ein.</p>
 
         <form>
-            <input type="number" id="Oberbrust" placeholder="Weite in mm"><br><br>
+            <input type="number" id="Oberbrust" placeholder="Weite in cm"><br><br>
         </form>
         <button onclick="Hide('Oberbrustweite', 'Ergebnis'); GifShow('Hide'); BrustInfo('Oberbrust')">
             <p class="TextInButton">Eingabe festlegen</p>
@@ -75,11 +75,9 @@
         <h1>Ihre BH Größe wurde berechnet! </h1>
         <br>
         <p>Ihre BH Größe entspricht der Größe.</p>
-        <h2 id="BHSize">Size</h2>
-        <p>
-
-            Ihre Größe für unsere Braletts entspricht:</p>
-        <h2 id="BralletsSize">Size</h2>
+        <h2 id="BHSize">Error</h2>
+        <p id="BralletsText">Ihre Größe für unsere Braletts entspricht:</p>
+        <h2 id="BralletsSize"></h2>
         <br><br>
         <br><br>
         <button onclick="Hide('Ergebnis', 'BH-Finder');">
