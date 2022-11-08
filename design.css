@@ -25,6 +25,39 @@ h3{
     width: auto;
 }
 
+#Img1{
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    height: 36%;
+    width: auto;
+}
+#Img2{
+    position: absolute;
+    bottom: 2%;
+    right:  2%;
+    height: 69%;
+    width: auto;
+}
+
+#Img3{
+    position: absolute;
+    bottom: 2%;
+    left:  2%;
+    height: 35%;
+    width: auto;
+    opacity: 0;
+}
+
+#Img4{
+    position: absolute;
+    bottom: 2%;
+    right:  2%;
+    height: 47%;
+    width: auto;
+    opacity: 0;
+}
+
 p {
     font-family: 'CircularXXSub-RegularSubset', Helvetica, Corbel, Arial, sans-serif;
     font-size: 2em;

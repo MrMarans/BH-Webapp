@@ -7,12 +7,48 @@ function Hide(Hide, ShowObj) {
         elementHide.style.display = "none";
         Show(ShowObj);
     }, 500);
+    var img;
+    switch (Hide) {
+        case "StartDiv": 
+        img = document.getElementById("Img1");
+        img.style.opacity = "0";
+        img.style.transition = "opacity 500ms";
+        img = document.getElementById("Img2");
+        img.style.opacity = "0";
+        img.style.transition = "opacity 500ms";
+        break;
+        case "Oberbrustweite":
+            img = document.getElementById("Img3");
+            img.style.opacity = "0";
+            img.style.transition = "opacity 500ms";
+            break;
+            case "Ergebnis":
+                img = document.getElementById("Img4");
+                img.style.opacity = "0";
+                img.style.transition = "opacity 500ms"; 
+                break;
+    }
+
+
 }
 function Show(Show) {
     elementShow = document.getElementById(Show);
     elementShow.style.opacity = "1";
     elementShow.style.transition = "opacity 500ms";
     elementShow.style.visibility = "visible";
+var img;
+    switch (Show) {
+        case "Unterbrustumfang":
+            
+        img = document.getElementById("Img3");
+        img.style.opacity = "1";
+        img.style.transition = "opacity 500ms"; 
+        break
+        case "Ergebnis":
+        img = document.getElementById("Img4");
+        img.style.opacity = "1";
+        img.style.transition = "opacity 500ms"; 
+    }
 }
 
 function GifShow(WhatToDo) {
@@ -36,17 +72,16 @@ function GifShow(WhatToDo) {
 
 var Unterbrust;
 var Oberbrust;
-function BrustInfo(Info)
-{
-    if(Info == "Unterbrust"){
+function BrustInfo(Info) {
+    if (Info == "Unterbrust") {
         Unterbrust = document.getElementById(Info).value;
+        console.log(Unterbrust);
     }
-    if(Info=="Oberbrust")
-    {
+    if (Info == "Oberbrust") {
         Oberbrust = document.getElementById(Info).value;
+        console.log(Unterbrust);
     }
-    if(Oberbrust !=null && Unterbrust!= null)
-    {
+    if (Oberbrust != null && Unterbrust != null) {
         //hier den Code von Daniela
     }
 }
