@@ -1,5 +1,8 @@
+var currentScene = "StartDiv";
 function Hide(Hide, ShowObj) {
     console.log(Hide);
+    if(Hide=="Menu"){Hide="currentScene";}
+    //Wenn man was eingeben soll aber falsche Daten eingeben tut
     if(Hide == "Unterbrustumfang" && (document.getElementById("Unterbrust").value==null || document.getElementById("Unterbrust").value<63 ||document.getElementById("Unterbrust").value>97 )){
         console.log("ShowRed");
         document.getElementById("Unterbrust").style.backgroundColor = "red";
@@ -20,6 +23,8 @@ function Hide(Hide, ShowObj) {
         }, 500);
         return;
     }
+    //Ende der Eingabetests
+    
     elementHide = document.getElementById(Hide);
     elementHide.style.opacity = "0";
     elementHide.style.transition = "opacity 500ms";
@@ -69,6 +74,7 @@ function Show(Show) {
             img.style.opacity = "1";
             img.style.transition = "opacity 500ms";
     }
+    currentScene = Show;
 }
 
 function GifShow(WhatToDo) {
