@@ -100,6 +100,11 @@ p {
     visibility: hidden;
 }
 
+.ErrorText{
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
 #Ergebnis {
     position: absolute;
     padding-top: 7.5%;

@@ -1,9 +1,17 @@
 var currentScene = "StartDiv";
+var Unterbrust;
+var Oberbrust;
+var Körbchen;
+var Brallets;
+
+
+
+
 function Hide(Hide, ShowObj, WhatToDo) {
-    console.log("Hide Something:" + Hide);
+    //console.log("Hide Something:" + Hide);
     //Wenn man was eingeben soll aber falsche Daten eingeben tut
     if (Hide == "Unterbrustumfang" && (document.getElementById("Unterbrust").value == null || document.getElementById("Unterbrust").value < 63 || document.getElementById("Unterbrust").value > 97)) {
-        console.log("ShowRed");
+        //console.log("ShowRed");
         document.getElementById("Unterbrust").style.backgroundColor = "red";
         setTimeout(() => {
             document.getElementById("Unterbrust").style.transition = "background-color 500ms";
@@ -13,7 +21,8 @@ function Hide(Hide, ShowObj, WhatToDo) {
         return;
     }
     if (Hide == "Oberbrustweite" && (document.getElementById("Oberbrust").value == null || document.getElementById("Oberbrust").value < 77 || document.getElementById("Oberbrust").value > 121)) {
-        console.log("ShowRed");
+        //console.log("ShowRed");
+
         document.getElementById("Oberbrust").style.backgroundColor = "red";
         setTimeout(() => {
             document.getElementById("Oberbrust").style.transition = "background-color 500ms";
@@ -22,26 +31,118 @@ function Hide(Hide, ShowObj, WhatToDo) {
         }, 500);
         return;
     }
+
+    if(Hide == "Oberbrustweite")
+     {
+        Oberbrust = document.getElementById("Oberbrust").value;
+        switch (Unterbrust){
+            case 70:  
+                if(Oberbrust <82 || Oberbrust > 96)
+                {
+                    document.getElementById("Oberbrust").style.backgroundColor = "red";
+                    document.getElementById("ErrorOber").style.opacity = "1";
+                    setTimeout(() => {
+                        document.getElementById("Oberbrust").style.transition = "background-color 500ms";
+                        document.getElementById("Oberbrust").style.backgroundColor = "white";
+                        document.getElementById("ErrorOber").style.opacity = "0";
+                    }, 500);
+                    return;
+                }
+                break;
+                case 75:  
+                if(Oberbrust <87 || Oberbrust > 101)
+                {
+                    document.getElementById("Oberbrust").style.backgroundColor = "red";
+                    document.getElementById("ErrorOber").style.opacity = "1";
+                    setTimeout(() => {
+                        document.getElementById("Oberbrust").style.transition = "background-color 500ms";
+                        document.getElementById("Oberbrust").style.backgroundColor = "white";
+                        document.getElementById("ErrorOber").style.opacity = "0";
+                    }, 500);
+                    return;
+                }
+                break;
+                case 80:  
+                if(Oberbrust <92 || Oberbrust > 106)
+                {
+                    document.getElementById("Oberbrust").style.backgroundColor = "red";
+                    document.getElementById("ErrorOber").style.opacity = "1";
+                    setTimeout(() => {
+                        document.getElementById("Oberbrust").style.transition = "background-color 500ms";
+                        document.getElementById("Oberbrust").style.backgroundColor = "white";
+                        document.getElementById("ErrorOber").style.opacity = "0";
+                    }, 500);
+                    return;
+                }
+                break;
+                case 85:  
+                if(Oberbrust <97 || Oberbrust > 111)
+                {
+                    document.getElementById("Oberbrust").style.backgroundColor = "red";
+                    document.getElementById("ErrorOber").style.opacity = "1";
+                    setTimeout(() => {
+                        document.getElementById("Oberbrust").style.transition = "background-color 500ms";
+                        document.getElementById("Oberbrust").style.backgroundColor = "white";
+                        document.getElementById("ErrorOber").style.opacity = "0";
+                    }, 500);
+                    return;
+                }
+                break;
+                case 90:  
+                if(Oberbrust <102 || Oberbrust > 116)
+                {
+                    document.getElementById("Oberbrust").style.backgroundColor = "red";
+                    document.getElementById("ErrorOber").style.opacity = "1";
+                    setTimeout(() => {
+                        document.getElementById("Oberbrust").style.transition = "background-color 500ms";
+                        document.getElementById("Oberbrust").style.backgroundColor = "white";
+                        document.getElementById("ErrorOber").style.opacity = "0";
+                    }, 500);
+                    return;
+                }
+                break;
+                case 95:  
+                if(Oberbrust <107 || Oberbrust > 121)
+                {
+                    document.getElementById("Oberbrust").style.backgroundColor = "red";
+                    document.getElementById("ErrorOber").style.opacity = "1";
+                    setTimeout(() => {
+                        document.getElementById("Oberbrust").style.transition = "background-color 500ms";
+                        document.getElementById("Oberbrust").style.backgroundColor = "white";
+                        document.getElementById("ErrorOber").style.opacity = "0";
+                    }, 500);
+                    return;
+                }
+                break;
+        }
+     }
+
+
+
+
     //Ende der Eingabetests
 
     var elementHide;
     if (Hide != "") {
         elementHide = document.getElementById(Hide);
-        console.log("ElementToHide is:" + Hide);
+
+        // console.log("ElementToHide is:" + Hide);
     }
     else {
+        Unterbrust = 0;
+        Oberbrust = 0;
         elementHide = document.getElementById(currentScene);
-        console.log("Hide Something:" + currentScene);
+        //console.log("Hide Something:" + currentScene);
 
     }
     elementHide.style.opacity = "0";
     elementHide.style.transition = "opacity 500ms";
     setTimeout(() => {
-        
+
         elementHide.style.visibility = "hidden";
         currentScene = ShowObj;
         Show(ShowObj);
-        console.log("current scene is: " + currentScene);
+        // console.log("current scene is: " + currentScene);
     }, 500);
 
 
@@ -69,8 +170,8 @@ function Hide(Hide, ShowObj, WhatToDo) {
             img.style.opacity = "0";
             img.style.transition = "opacity 500ms";
             break;
-            case "":
-                img = document.getElementById("Img1");
+        case "":
+            img = document.getElementById("Img1");
             img.style.opacity = "0";
             img.style.transition = "opacity 500ms";
             img = document.getElementById("Img2");
@@ -82,7 +183,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
             img = document.getElementById("Img4");
             img.style.opacity = "0";
             img.style.transition = "opacity 500ms";
-                break;
+            break;
     }
 
 
@@ -100,7 +201,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
         gif1.style.opacity = "0";
         gif2.style.visibility = "visible";
         setTimeout(() => {
-            console.log("Gif2Show");
+            //  console.log("Gif2Show");
             gif1.style.visibility = "hidden";
             gif2.style.visibility = "visible";
             gif2.style.opacity = "1";
@@ -113,7 +214,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
         setTimeout(() => {
             gif1.style.visibility = "hidden";
             gif2.style.visibility = "hidden";
-            console.log("Gif2Hide");
+            //  console.log("Gif2Hide");
         }, 500);
     }
 
@@ -165,7 +266,7 @@ function GifShow(WhatToDo) {
         gif1.style.opacity = "0";
         gif2.style.visibility = "visible";
         setTimeout(() => {
-            console.log("Gif2Show");
+            //  console.log("Gif2Show");
             gif1.style.visibility = "hidden";
             gif2.style.visibility = "visible";
             gif2.style.opacity = "1";
@@ -176,22 +277,19 @@ function GifShow(WhatToDo) {
         gif2.style.opacity = "0";
         setTimeout(() => {
             gif2.style.visibility = "hidden";
-            console.log("Gif2Hide");
+            //  console.log("Gif2Hide");
         }, 500);
     }
 }
 
-var Unterbrust;
-var Oberbrust;
-var Körbchen;
-var Brallets;
+
 function BrustInfo(Info) {
     if (Info == "Unterbrust") {
         Unterbrust = document.getElementById(Info).value;
         if (Unterbrust == null || Unterbrust < 63 || Unterbrust > 97) {
             Unterbrust = null;
             //Error
-            console.log("Error");
+              console.log("Error");
         }
         else {
 
@@ -216,18 +314,20 @@ function BrustInfo(Info) {
             if (Unterbrust >= 93 && Unterbrust <= 97) {
                 Unterbrust = 95;
             }
-            console.log(Unterbrust);
+             console.log(Unterbrust);
         }
     }
     if (Info == "Oberbrust") {
+        console.log("Brustinfos");
         Oberbrust = document.getElementById(Info).value;
-        console.log(Oberbrust);
+        //  console.log(Oberbrust);
         if (Oberbrust == null || Oberbrust < 77 || Oberbrust > 121) {
             Oberbrust = null;
             //Error
-            console.log("Error");
+              console.log("Error");
         }
         else {
+            console.log("For Switch Unterbrist ist: "+Unterbrust);
             switch (Unterbrust) {
                 case 65:
                     if (Oberbrust == 79 || Oberbrust == 81 || Oberbrust == 83 || Oberbrust == 85 || Oberbrust == 87 || Oberbrust == 89) {
@@ -239,7 +339,7 @@ function BrustInfo(Info) {
                             case "87": Körbchen = "E/F"; Brallets = "S/Sondergröße"; break;
                             case "89": Körbchen = "F/G"; Brallets = "Sondergröße"; break;
                         }
-                        console.log("70 Korb switch");
+                          console.log("65 Korb switch");
                     }
                     else {
                         if (Oberbrust >= 77 && Oberbrust <= 79) { Körbchen = "A"; Brallets = "XS"; }
@@ -262,7 +362,7 @@ function BrustInfo(Info) {
                             case "92": Körbchen = "E/F"; Brallets = "S/Sondergröße"; break;
                             case "94": Körbchen = "F/G"; Brallets = "Sondergröße"; break;
                         }
-                        console.log("70 Korb switch");
+                          console.log("70 Korb switch");
                     }
                     else {
                         if (Oberbrust >= 82 && Oberbrust <= 84) { Körbchen = "A"; Brallets = "XS"; }
@@ -284,7 +384,7 @@ function BrustInfo(Info) {
                             case "97": Körbchen = "E/F"; Brallets = "M/Sondergröße"; break;
                             case "99": Körbchen = "F/G"; Brallets = "Sondergröße"; break;
                         }
-                        console.log("75 Korb switch");
+                        // console.log("75 Korb switch");
                     }
                     else {
                         if (Oberbrust >= 87 && Oberbrust <= 89) { Körbchen = "A"; Brallets = "S"; }
@@ -306,7 +406,7 @@ function BrustInfo(Info) {
                             case "102": Körbchen = "E/F"; Brallets = "Sondergröße"; break;
                             case "104": Körbchen = "F/G"; Brallets = "Sondergröße"; break;
                         }
-                        console.log("80 Korb switch");
+                        //   console.log("80 Korb switch");
                     }
                     else {
                         if (Oberbrust >= 92 && Oberbrust <= 94) { Körbchen = "A"; Brallets = "S"; }
@@ -329,7 +429,7 @@ function BrustInfo(Info) {
                             case "107": Körbchen = "E/F"; Brallets = "Sondergröße"; break;
                             case "109": Körbchen = "F/G"; Brallets = "Sondergröße"; break;
                         }
-                        console.log("85 Korb switch");
+                        //     console.log("85 Korb switch");
                     }
                     else {
                         if (Oberbrust >= 97 && Oberbrust <= 99) { Körbchen = "A"; Brallets = "M"; }
@@ -352,7 +452,7 @@ function BrustInfo(Info) {
                             case "112": Körbchen = "E/F"; Brallets = "Sondergröße"; break;
                             case "114": Körbchen = "F/G"; Brallets = "Sondergröße"; break;
                         }
-                        console.log("90 Korb switch");
+                        //     console.log("90 Korb switch");
                     }
                     else {
                         if (Oberbrust >= 102 && Oberbrust <= 104) { Körbchen = "A"; Brallets = "L"; }
@@ -376,7 +476,7 @@ function BrustInfo(Info) {
                             case "117": Körbchen = "E/F"; Brallets = "Sondergröße"; break;
                             case "119": Körbchen = "F/G"; Brallets = "Sondergröße"; break;
                         }
-                        console.log("95 Korb switch");
+                        //       console.log("95 Korb switch");
                     } else {
                         if (Oberbrust >= 107 && Oberbrust <= 109) { Körbchen = "A"; Brallets = "XL"; }
                         if (Oberbrust >= 109 && Oberbrust <= 111) { Körbchen = "B"; Brallets = "Sondergröße"; }
@@ -394,10 +494,15 @@ function BrustInfo(Info) {
         document.getElementById("BHSize").innerHTML = Unterbrust + Körbchen;
         if (Brallets != "Sondergröße") {
             document.getElementById("BralletsSize").innerHTML = Brallets;
+            document.getElementById("BralletsSize").style.opacity = "1";
+            document.getElementById("BralletsText").style.opacity = "1";
         }
         else {
             document.getElementById("BralletsText").style.opacity = "0";
+            document.getElementById("BralletsSize").style.opacity = "0";
         }
+        console.log("BralletsSize is: " + Brallets);
+        console.log("BHSize is: " + Unterbrust + Körbchen);
     }
 }
 
