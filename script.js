@@ -12,10 +12,12 @@ function Hide(Hide, ShowObj, WhatToDo) {
     //Wenn man was eingeben soll aber falsche Daten eingeben tut
     if (Hide == "Unterbrustumfang" && (document.getElementById("Unterbrust").value == null || document.getElementById("Unterbrust").value < 63 || document.getElementById("Unterbrust").value > 97)) {
         //console.log("ShowRed");
-        document.getElementById("Unterbrust").style.backgroundColor = "red";
+        document.getElementById("Unterbrust").style.backgroundColor = "#74afb0";
+        document.getElementById("ErrorUnter").style.opacity = "1";
         setTimeout(() => {
             document.getElementById("Unterbrust").style.transition = "background-color 500ms";
             document.getElementById("Unterbrust").style.backgroundColor = "white";
+            document.getElementById("ErrorUnter").style.opacity = "0";
 
         }, 500);
         return;
@@ -23,7 +25,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
     if (Hide == "Oberbrustweite" && (document.getElementById("Oberbrust").value == null || document.getElementById("Oberbrust").value < 77 || document.getElementById("Oberbrust").value > 121)) {
         //console.log("ShowRed");
 
-        document.getElementById("Oberbrust").style.backgroundColor = "red";
+        document.getElementById("Oberbrust").style.backgroundColor = "#74afb0";
         setTimeout(() => {
             document.getElementById("Oberbrust").style.transition = "background-color 500ms";
             document.getElementById("Oberbrust").style.backgroundColor = "white";
@@ -39,7 +41,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
             case 70:  
                 if(Oberbrust <82 || Oberbrust > 96)
                 {
-                    document.getElementById("Oberbrust").style.backgroundColor = "red";
+                    document.getElementById("Oberbrust").style.backgroundColor = "#74afb0";
                     document.getElementById("ErrorOber").style.opacity = "1";
                     setTimeout(() => {
                         document.getElementById("Oberbrust").style.transition = "background-color 500ms";
@@ -52,7 +54,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
                 case 75:  
                 if(Oberbrust <87 || Oberbrust > 101)
                 {
-                    document.getElementById("Oberbrust").style.backgroundColor = "red";
+                    document.getElementById("Oberbrust").style.backgroundColor = "#74afb0";
                     document.getElementById("ErrorOber").style.opacity = "1";
                     setTimeout(() => {
                         document.getElementById("Oberbrust").style.transition = "background-color 500ms";
@@ -65,7 +67,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
                 case 80:  
                 if(Oberbrust <92 || Oberbrust > 106)
                 {
-                    document.getElementById("Oberbrust").style.backgroundColor = "red";
+                    document.getElementById("Oberbrust").style.backgroundColor = "#74afb0";
                     document.getElementById("ErrorOber").style.opacity = "1";
                     setTimeout(() => {
                         document.getElementById("Oberbrust").style.transition = "background-color 500ms";
@@ -78,7 +80,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
                 case 85:  
                 if(Oberbrust <97 || Oberbrust > 111)
                 {
-                    document.getElementById("Oberbrust").style.backgroundColor = "red";
+                    document.getElementById("Oberbrust").style.backgroundColor = "#74afb0";
                     document.getElementById("ErrorOber").style.opacity = "1";
                     setTimeout(() => {
                         document.getElementById("Oberbrust").style.transition = "background-color 500ms";
@@ -91,7 +93,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
                 case 90:  
                 if(Oberbrust <102 || Oberbrust > 116)
                 {
-                    document.getElementById("Oberbrust").style.backgroundColor = "red";
+                    document.getElementById("Oberbrust").style.backgroundColor = "#74afb0";
                     document.getElementById("ErrorOber").style.opacity = "1";
                     setTimeout(() => {
                         document.getElementById("Oberbrust").style.transition = "background-color 500ms";
@@ -104,7 +106,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
                 case 95:  
                 if(Oberbrust <107 || Oberbrust > 121)
                 {
-                    document.getElementById("Oberbrust").style.backgroundColor = "red";
+                    document.getElementById("Oberbrust").style.backgroundColor = "#74afb0";
                     document.getElementById("ErrorOber").style.opacity = "1";
                     setTimeout(() => {
                         document.getElementById("Oberbrust").style.transition = "background-color 500ms";
