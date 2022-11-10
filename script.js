@@ -1,30 +1,30 @@
 var currentScene = "StartDiv";
 function Hide(Hide, ShowObj) {
     console.log(Hide);
-    if(Hide=="Menu"){Hide="currentScene";}
+    if (Hide == "Menu") { Hide = "currentScene"; }
     //Wenn man was eingeben soll aber falsche Daten eingeben tut
-    if(Hide == "Unterbrustumfang" && (document.getElementById("Unterbrust").value==null || document.getElementById("Unterbrust").value<63 ||document.getElementById("Unterbrust").value>97 )){
+    if (Hide == "Unterbrustumfang" && (document.getElementById("Unterbrust").value == null || document.getElementById("Unterbrust").value < 63 || document.getElementById("Unterbrust").value > 97)) {
         console.log("ShowRed");
         document.getElementById("Unterbrust").style.backgroundColor = "red";
         setTimeout(() => {
             document.getElementById("Unterbrust").style.transition = "background-color 500ms";
             document.getElementById("Unterbrust").style.backgroundColor = "white";
-            
+
         }, 500);
         return;
     }
-    if(Hide == "Oberbrustweite" && (document.getElementById("Oberbrust").value==null || document.getElementById("Oberbrust").value<77 ||document.getElementById("Oberbrust").value>121 )){
+    if (Hide == "Oberbrustweite" && (document.getElementById("Oberbrust").value == null || document.getElementById("Oberbrust").value < 77 || document.getElementById("Oberbrust").value > 121)) {
         console.log("ShowRed");
         document.getElementById("Oberbrust").style.backgroundColor = "red";
         setTimeout(() => {
             document.getElementById("Oberbrust").style.transition = "background-color 500ms";
             document.getElementById("Oberbrust").style.backgroundColor = "white";
-            
+
         }, 500);
         return;
     }
     //Ende der Eingabetests
-    
+
     elementHide = document.getElementById(Hide);
     elementHide.style.opacity = "0";
     elementHide.style.transition = "opacity 500ms";
@@ -78,22 +78,33 @@ function Show(Show) {
 }
 
 function GifShow(WhatToDo) {
-    gif = document.getElementById("Gif");
-
-    if (WhatToDo == "Show") {
+    gif1 = document.getElementById("Gif1");
+    gif2 = document.getElementById("Gif2");
+    if (WhatToDo == "Gif1") {
         setTimeout(() => {
-            gif.style.visibility = "visible"; gif.style.opacity = "1";
-            gif.style.transition = "opacity 500ms";
+            gif1.style.visibility = "visible";
+            gif1.style.opacity = "1";
+            gif1.style.transition = "opacity 500ms";
         }, 500);
     }
-    else {
-        gif.style.opacity = "0";
+    if (WhatToDo == "Gif2") {
+        gif1.style.opacity = "0";
+        gif2.style.visibility = "visible";
         setTimeout(() => {
-            gif.style.visibility = "hidden";
-
+            console.log("Gif2Show");
+            gif1.style.visibility = "hidden";
+            gif2.style.visibility = "visible";
+            gif2.style.opacity = "1";
+            gif2.style.transition = "opacity 500ms";
         }, 500);
     }
-
+    if (WhatToDo == "hide"){
+        gif2.style.opacity = "0";
+        setTimeout(() => {
+        gif2.style.visibility = "hidden";
+        console.log("Gif2Hide");
+        }, 500);
+    }
 }
 
 var Unterbrust;
@@ -310,8 +321,8 @@ function BrustInfo(Info) {
         if (Brallets != "Sondergröße") {
             document.getElementById("BralletsSize").innerHTML = Brallets;
         }
-        else{
-           document.getElementById("BralletsText").style.opacity="0";
+        else {
+            document.getElementById("BralletsText").style.opacity = "0";
         }
     }
 }

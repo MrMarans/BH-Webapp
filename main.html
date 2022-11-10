@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="design.css" onclick="Hide('',''">
+    <link rel="stylesheet" href="design.css" onclick="Hide('','')">
     <script src="script.js"></script>
 </head>
 
@@ -23,12 +23,18 @@
         </p>
         <p>
             Drücken Sie start und folgen Sie den Anweisungen.</p>
-        <button onclick="Hide('StartDiv','Unterbrustumfang'); GifShow('Show')">
+        <button onclick="Hide('StartDiv','Unterbrustumfang'); GifShow('Gif1')">
             <p class="TextInButton">Start</p>
         </button>
     </div>
 
-    <img src="Bilder/Vorschau.png" id="Gif">
+    <video autoplay muted loop class="vid" id="Gif1">
+        <source src="Bilder/UnterbrustVid.mp4" type="video/mp4">
+    </video>
+   
+    <video autoplay muted loop class="vid" id="Gif2">
+        <source src="Bilder/OberbrustVid.mp4" type="video/mp4">
+    </video>
     <div id="Unterbrustumfang">
 
 
@@ -41,7 +47,7 @@
         <form style="margin-top: 150px;">
             <input type="number" id="Unterbrust" placeholder="Weite in cm"><br><br>
         </form>
-        <button onclick="Hide('Unterbrustumfang','Oberbrustweite'); BrustInfo('Unterbrust')">
+        <button onclick="Hide('Unterbrustumfang','Oberbrustweite'); BrustInfo('Unterbrust'); GifShow('Gif2')">
             <p class="TextInButton">Eingabe festlegen</p>
         </button>
         </button>
@@ -59,7 +65,7 @@
         <form>
             <input type="number" id="Oberbrust" placeholder="Weite in cm"><br><br>
         </form>
-        <button onclick="Hide('Oberbrustweite', 'Ergebnis'); GifShow('Hide'); BrustInfo('Oberbrust')">
+        <button onclick="Hide('Oberbrustweite', 'Ergebnis'); BrustInfo('Oberbrust'); GifShow('hide') ">
             <p class="TextInButton">Eingabe festlegen</p>
         </button>
         </button>
