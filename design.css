@@ -59,6 +59,7 @@ h3{
     opacity: 0;
 }
 
+
 p {
     font-family: 'CircularXXSub-RegularSubset', Helvetica, Corbel, Arial, sans-serif;
     font-size: 2em;
@@ -117,6 +118,43 @@ p {
     opacity: 0;
     visibility: hidden;
 }
+
+
+#Shop{
+    position: absolute;
+    height: 90%;
+    width: 45%;
+    text-align: center;
+    left:3%;
+    top: 5%;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 500ms;
+    visibility: hidden;
+}
+
+.ShopImageContainer{
+    position: relative;
+    width: auto;
+    height: 91%;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 70px;
+ }
+
+.ShopImage{
+    position: absolute;
+    margin: auto;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);  
+    border-radius: 30px;
+ }
+
 
 #BH-Finder {
     position: absolute;
@@ -194,6 +232,8 @@ p {
    margin-top: 6%;
    border-radius: 70px;
 }
+
+
 
 .PreVis{
     position: absolute;

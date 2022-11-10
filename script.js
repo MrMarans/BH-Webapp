@@ -149,7 +149,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
 
 
     //BG Bilder
-
+    Render =  document.getElementById("Shop");
     var img;
     switch (Hide) {
         case "StartDiv":
@@ -183,6 +183,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
             img = document.getElementById("Img4");
             img.style.opacity = "0";
             img.style.transition = "opacity 500ms";
+            Render.style.opacity="0";
             break;
     }
 
@@ -208,6 +209,14 @@ function Hide(Hide, ShowObj, WhatToDo) {
             gif2.style.transition = "opacity 500ms";
         }, 500);
     }
+    if(WhatToDo=="Render")
+    {
+        setTimeout(() => {
+      Render.style.visibility = "visible";
+      Render.style.opacity="1";
+    }, 500);
+    }
+
     if (WhatToDo == "hide") {
         gif2.style.opacity = "0";
         gif1.style.opacity = "0";
@@ -219,6 +228,9 @@ function Hide(Hide, ShowObj, WhatToDo) {
     }
 
 }
+
+
+
 function Show(Show) {
     elementShow = document.getElementById(Show);
     elementShow.style.opacity = "1";
@@ -512,10 +524,12 @@ function OpenArticle(Nr) {
     info = article.querySelector('.Info');
     ImgDiv = article.querySelector('.ImgDiv');
     PreVis = ImgDiv.querySelector('.PreVis');
+    ShopImage = document.getElementById("ShopImage");
     if (article.style.height != "71%") {
         article.style.height = "71%";
         info.style.minHeight = "16%"
         ImgDiv.style.width = "46%";
+        ShopImage.src = 'Bilder/RenderProdukt.png';
         switch (Nr) {
             case 1: PreVis.src = 'Bilder/74202-365_set_800x1200.webp';
                 break;
@@ -528,9 +542,10 @@ function OpenArticle(Nr) {
             case 5: PreVis.src = 'Bilder/74039-46_set_800x1200.webp';
                 break;
         }
-
+        
     }
     else {
+        ShopImage.src = 'Bilder/Render.png';
         article.style.height = "17%";
         info.style.minHeight = "100%"
         ImgDiv.style.width = "20%";
@@ -545,6 +560,21 @@ function OpenArticle(Nr) {
                 break;
             case 5: PreVis.src = 'Bilder/74039-46_800x1200.webp';
                 break;
+        }
+    }
+
+    for(var i = 1; i <6; i++)
+    {
+        if(i != Nr)
+        {
+        article = document.getElementById(i);
+         info = article.querySelector('.Info');
+         ImgDiv = article.querySelector('.ImgDiv');
+         PreVis = ImgDiv.querySelector('.PreVis');
+
+         article.style.height = "17%";
+        info.style.minHeight = "100%"
+        ImgDiv.style.width = "20%";
         }
     }
 }
