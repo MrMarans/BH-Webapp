@@ -2,12 +2,12 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="design.css" onclick="Hide('','')">
+    <link rel="stylesheet" href="design.css">
     <script src="script.js"></script>
 </head>
 
 <body>
-    <img src="Bilder/mey-logo.jpg" id="Logo" onclick="">
+    <img src="Bilder/mey-logo.jpg" id="Logo" onclick="Hide('','StartDiv','hide')">
     <img src="Bilder/p4.png" id="Img1">
     <img src="Bilder/p2.png" id="Img2">
     <img src="Bilder/p1.png" id="Img3">
@@ -23,10 +23,12 @@
         </p>
         <p>
             Drücken Sie start und folgen Sie den Anweisungen.</p>
-        <button onclick="Hide('StartDiv','Unterbrustumfang'); GifShow('Gif1')">
+        <button onclick="Hide('StartDiv','Unterbrustumfang', 'Gif1');">
             <p class="TextInButton">Start</p>
         </button>
     </div>
+
+    <!-- VIDEOS -->
 
     <video autoplay muted loop class="vid" id="Gif1">
         <source src="Bilder/UnterbrustVid.mp4" type="video/mp4">
@@ -35,6 +37,10 @@
     <video autoplay muted loop class="vid" id="Gif2">
         <source src="Bilder/OberbrustVid.mp4" type="video/mp4">
     </video>
+  
+  
+  <!-- Unterbrust -->
+  
     <div id="Unterbrustumfang">
 
 
@@ -47,12 +53,14 @@
         <form style="margin-top: 150px;">
             <input type="number" id="Unterbrust" placeholder="Weite in cm"><br><br>
         </form>
-        <button onclick="Hide('Unterbrustumfang','Oberbrustweite'); BrustInfo('Unterbrust'); GifShow('Gif2')">
+        <button onclick="Hide('Unterbrustumfang','Oberbrustweite', 'Gif2'); BrustInfo('Unterbrust');">
             <p class="TextInButton">Eingabe festlegen</p>
         </button>
         </button>
     </div>
 
+
+    <!-- Oberbrust -->
 
     <div id="Oberbrustweite">
         <h1>Schritt 2: Der Brustumfang </h1>
@@ -65,13 +73,14 @@
         <form>
             <input type="number" id="Oberbrust" placeholder="Weite in cm"><br><br>
         </form>
-        <button onclick="Hide('Oberbrustweite', 'Ergebnis'); BrustInfo('Oberbrust'); GifShow('hide') ">
+        <button onclick="Hide('Oberbrustweite', 'Ergebnis', 'hide'); BrustInfo('Oberbrust');">
             <p class="TextInButton">Eingabe festlegen</p>
         </button>
         </button>
-
-
     </div>
+
+
+    <!-- Ergebnis -->
 
     <div id="Ergebnis" style="visibility: hidden;">
         <h1>Ihre BH Größe wurde berechnet! </h1>
@@ -87,6 +96,7 @@
         </button>
     </div>
 
+    <!-- BH FInder -->
 
     <div id="BH-Finder">
         <h2 style="text-align: left; margin-left: 5%; margin-top: 5%;">Aktuelle Saison-Produke:</h2>

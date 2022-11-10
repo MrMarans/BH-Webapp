@@ -1,7 +1,6 @@
 var currentScene = "StartDiv";
-function Hide(Hide, ShowObj) {
-    console.log(Hide);
-    if (Hide == "Menu") { Hide = "currentScene"; }
+function Hide(Hide, ShowObj, WhatToDo) {
+    console.log("Hide Something:" + Hide);
     //Wenn man was eingeben soll aber falsche Daten eingeben tut
     if (Hide == "Unterbrustumfang" && (document.getElementById("Unterbrust").value == null || document.getElementById("Unterbrust").value < 63 || document.getElementById("Unterbrust").value > 97)) {
         console.log("ShowRed");
@@ -25,13 +24,31 @@ function Hide(Hide, ShowObj) {
     }
     //Ende der Eingabetests
 
-    elementHide = document.getElementById(Hide);
+    var elementHide;
+    if (Hide != "") {
+        elementHide = document.getElementById(Hide);
+        console.log("ElementToHide is:" + Hide);
+    }
+    else {
+        elementHide = document.getElementById(currentScene);
+        console.log("Hide Something:" + currentScene);
+
+    }
     elementHide.style.opacity = "0";
     elementHide.style.transition = "opacity 500ms";
     setTimeout(() => {
-        elementHide.style.display = "none";
+        
+        elementHide.style.visibility = "hidden";
+        currentScene = ShowObj;
         Show(ShowObj);
+        console.log("current scene is: " + currentScene);
     }, 500);
+
+
+
+
+    //BG Bilder
+
     var img;
     switch (Hide) {
         case "StartDiv":
@@ -52,8 +69,53 @@ function Hide(Hide, ShowObj) {
             img.style.opacity = "0";
             img.style.transition = "opacity 500ms";
             break;
+            case "":
+                img = document.getElementById("Img1");
+            img.style.opacity = "0";
+            img.style.transition = "opacity 500ms";
+            img = document.getElementById("Img2");
+            img.style.opacity = "0";
+            img.style.transition = "opacity 500ms";
+            img = document.getElementById("Img3");
+            img.style.opacity = "0";
+            img.style.transition = "opacity 500ms";
+            img = document.getElementById("Img4");
+            img.style.opacity = "0";
+            img.style.transition = "opacity 500ms";
+                break;
     }
 
+
+    // Videos
+    gif1 = document.getElementById("Gif1");
+    gif2 = document.getElementById("Gif2");
+    if (WhatToDo == "Gif1") {
+        setTimeout(() => {
+            gif1.style.visibility = "visible";
+            gif1.style.opacity = "1";
+            gif1.style.transition = "opacity 500ms";
+        }, 500);
+    }
+    if (WhatToDo == "Gif2") {
+        gif1.style.opacity = "0";
+        gif2.style.visibility = "visible";
+        setTimeout(() => {
+            console.log("Gif2Show");
+            gif1.style.visibility = "hidden";
+            gif2.style.visibility = "visible";
+            gif2.style.opacity = "1";
+            gif2.style.transition = "opacity 500ms";
+        }, 500);
+    }
+    if (WhatToDo == "hide") {
+        gif2.style.opacity = "0";
+        gif1.style.opacity = "0";
+        setTimeout(() => {
+            gif1.style.visibility = "hidden";
+            gif2.style.visibility = "hidden";
+            console.log("Gif2Hide");
+        }, 500);
+    }
 
 }
 function Show(Show) {
@@ -61,6 +123,8 @@ function Show(Show) {
     elementShow.style.opacity = "1";
     elementShow.style.transition = "opacity 500ms";
     elementShow.style.visibility = "visible";
+
+
     var img;
     switch (Show) {
         case "Unterbrustumfang":
@@ -73,7 +137,17 @@ function Show(Show) {
             img = document.getElementById("Img4");
             img.style.opacity = "1";
             img.style.transition = "opacity 500ms";
+            break;
+        case "StartDiv":
+            img = document.getElementById("Img1");
+            img.style.opacity = "1";
+            img.style.transition = "opacity 500ms";
+            img = document.getElementById("Img2");
+            img.style.opacity = "1";
+            img.style.transition = "opacity 500ms";
+            break;
     }
+
     currentScene = Show;
 }
 
@@ -98,11 +172,11 @@ function GifShow(WhatToDo) {
             gif2.style.transition = "opacity 500ms";
         }, 500);
     }
-    if (WhatToDo == "hide"){
+    if (WhatToDo == "hide") {
         gif2.style.opacity = "0";
         setTimeout(() => {
-        gif2.style.visibility = "hidden";
-        console.log("Gif2Hide");
+            gif2.style.visibility = "hidden";
+            console.log("Gif2Hide");
         }, 500);
     }
 }

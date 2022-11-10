@@ -21,8 +21,9 @@ h3{
     position: absolute;
     top: 13px;
     left: 20px;
-    height: 60px;
+    height: 80px;
     width: auto;
+    z-index: 600;
 }
 
 #Img1{
@@ -43,7 +44,7 @@ h3{
 #Img3{
     position: absolute;
     bottom: 2%;
-    left:  2%;
+    right:  2%;
     height: 35%;
     width: auto;
     opacity: 0;
