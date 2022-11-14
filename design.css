@@ -140,7 +140,7 @@ p {
     overflow: hidden;
     margin: auto;
     margin-top: 2%;
-    border-radius: 70px;
+    border-radius: 3.5%;
  }
 
 .ShopImage{
@@ -152,7 +152,7 @@ p {
     left: 50%;
     top: 50%;
     -webkit-transform: translateY(-50%) translateX(-50%);  
-    border-radius: 30px;
+    border-radius: 1.5%;
  }
 
 
@@ -198,7 +198,7 @@ p {
 
 .Artikel{
     position: relative;
-    border-radius: 6%;
+    border-radius: 3%;
     background-color: white;
     margin: 3%;
     height: 17%;
@@ -215,7 +215,7 @@ p {
     position: relative;
     width: 20%;
     height: 100%;
-    border-radius: 30px;
+    border-radius: 1.5%;
     float: left;   
     margin-right: 5%;
     overflow: hidden;
@@ -230,7 +230,7 @@ p {
    overflow: hidden;
    margin: auto;
    margin-top: 6%;
-   border-radius: 70px;
+   border-radius: 3.5%;
 }
 
 
@@ -239,7 +239,7 @@ p {
     position: absolute;
     max-height: 100%; 
     width: auto;
-    border-radius: 30px;
+    border-radius: 1.5%;
     left: 50%;
    top: 50%;
    -webkit-transform: translateY(-50%) translateX(-50%);  
@@ -249,7 +249,7 @@ p {
     position: absolute;
     max-height: 100%; 
     width: auto;
-    border-radius: 30px;
+    border-radius: 1.5%;
     left: 50%;
    top: 50%;
    -webkit-transform: translateY(-50%) translateX(-50%);  
@@ -317,7 +317,7 @@ button {
     height: auto;
     width: auto;
     padding: 20px;
-    border-radius: 25px;
+    border-radius: 1.2%;
     border-width: 3px;
     border-color: gray;
     background-color: white;
@@ -332,7 +332,7 @@ button {
 input {
     height: 50px;
     width: 250px;
-    border-radius: 25px;
+    border-radius: 1.2%;
     border-width: 3px;
     background-color: white;
     font-size: 1.5em;
