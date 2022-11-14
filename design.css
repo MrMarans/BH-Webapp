@@ -1,19 +1,19 @@
 h1 {
     color: black;
-    font-size: 3em;
+    font-size: 2em;
     font-family: 'Bota-Bold', Georgia, 'Times New Roman', Times, serif;
 
 }
 
 h2 {
     color: black;
-    font-size: 2.7em;
+    font-size: 1.7em;
     font-family: 'Bota-Bold', Georgia, 'Times New Roman', Times, serif;
 
 }
 h3{
     color: black;
-    font-size: 2.3em;
+    font-size: 1.3em;
     font-family: 'Bota-Bold', Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -62,7 +62,7 @@ h3{
 
 p {
     font-family: 'CircularXXSub-RegularSubset', Helvetica, Corbel, Arial, sans-serif;
-    font-size: 2em;
+    font-size: 1em;
 
 }
 
@@ -305,7 +305,7 @@ ImgDiv width: von 20 auf 46%
 }
 
 .price{
-    font-size: 2.7em;
+    font-size: 1.7em;
     position: absolute;
     bottom: 0px;
     right: 0px;
