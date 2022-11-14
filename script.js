@@ -527,9 +527,9 @@ function OpenArticle(Nr) {
     ImgDiv = article.querySelector('.ImgDiv');
     PreVis = ImgDiv.querySelector('.PreVis');
     ShopImage = document.getElementById("ShopImage");
-    if (article.style.height != "71%") {
-        article.style.height = "71%";
-        info.style.minHeight = "16%"
+    if (article.style.height != "75%") {
+        article.style.height = "75%";
+        info.style.minHeight = "24%"
         ImgDiv.style.width = "46%";
         ShopImage.src = 'Bilder/RenderProdukt.png';
         switch (Nr) {
