@@ -5,9 +5,8 @@ var Körbchen;
 var Brallets;
 
 
-
-
 function Hide(Hide, ShowObj, WhatToDo) {
+
     //console.log("Hide Something:" + Hide);
     //Wenn man was eingeben soll aber falsche Daten eingeben tut
     if (Hide == "Unterbrustumfang" && (document.getElementById("Unterbrust").value == null || document.getElementById("Unterbrust").value < 63 || document.getElementById("Unterbrust").value > 97)) {
@@ -296,14 +295,13 @@ function GifShow(WhatToDo) {
     }
 }
 
-
 function BrustInfo(Info) {
     if (Info == "Unterbrust") {
         Unterbrust = document.getElementById(Info).value;
         if (Unterbrust == null || Unterbrust < 63 || Unterbrust > 97) {
             Unterbrust = null;
             //Error
-              console.log("Error");
+              console.log("ErrorUnterbrust");
         }
         else {
 
@@ -518,7 +516,9 @@ function BrustInfo(Info) {
         console.log("BralletsSize is: " + Brallets);
         console.log("BHSize is: " + Unterbrust + Körbchen);
     }
+    return false;
 }
+
 
 
 function OpenArticle(Nr) {

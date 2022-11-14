@@ -50,13 +50,13 @@
         <p>
 
             Der Unterbrustumfang misst sich direkt unter der Brust. Messen Sie diesen Wert und geben Sie diesen anschließend in das Textfeld ein.</p>
-        <form style="margin-top: 30px;">
-            <input type="number" id="Unterbrust" placeholder="Weite in cm"><p class="ErrorText" id="ErrorUnter">Diese Größe bieten wir nicht an.</p>
+        <form style="margin-top: 50px;" onsubmit="Hide('Unterbrustumfang','Oberbrustweite', 'Gif2'); BrustInfo('Unterbrust'); return false;">
+            <input type="number, submit" id="Unterbrust" placeholder="Weite in cm" maxlength="3"/><p class="ErrorText" id="ErrorUnter">Diese Größe bieten wir nicht an.</p>
         </form>
-        <button onclick="Hide('Unterbrustumfang','Oberbrustweite', 'Gif2'); BrustInfo('Unterbrust');">
+    <!--    <button onclick="Hide('Unterbrustumfang','Oberbrustweite', 'Gif2'); BrustInfo('Unterbrust');">
             <p class="TextInButton">Eingabe festlegen</p>
         </button>
-        </button>
+    -->
     </div>
 
 
@@ -70,13 +70,12 @@
 
             Der Brustumfang misst sich horizontal auf der Höhe der Brustspitzen. Messen Sie diesen Wert und geben Sie diesen anschließend in das Textfeld ein.</p>
 
-        <form>
-            <input type="number" id="Oberbrust" placeholder="Weite in cm"><p class="ErrorText" id="ErrorOber">Wert zu hoch oder zu niedrig</p>
+        <form onsubmit="Hide('Oberbrustweite', 'Ergebnis', 'hide'); BrustInfo('Oberbrust'); return false;">
+            <input type="number" id="Oberbrust" placeholder="Weite in cm" maxlength="3"  ><p class="ErrorText" id="ErrorOber">Wert zu hoch oder zu niedrig</p>
         </form>
-        <button onclick="Hide('Oberbrustweite', 'Ergebnis', 'hide'); BrustInfo('Oberbrust');">
+      <!--  <button onclick="Hide('Oberbrustweite', 'Ergebnis', 'hide'); BrustInfo('Oberbrust');">
             <p class="TextInButton">Eingabe festlegen</p>
-        </button>
-        </button>
+        </button>-->
     </div>
 
 
@@ -98,7 +97,7 @@
 
     <!--Image des Shops-->
     <div id="Shop">
-    <h2 style="margin-top: 15%;">BH's Ihrer Größe finden Sie hier:</h2>
+    <h2 style="margin-top: 5%;">BH's Ihrer Größe finden Sie hier:</h2>
     <div class="ShopImageContainer">
    <img src="Bilder/Render.png" class="ShopImage" id="ShopImage"></div></div>
 
