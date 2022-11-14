@@ -7,7 +7,7 @@ h1 {
 
 h2 {
     color: black;
-    font-size: 1.7em;
+    font-size: 1.3em;
     font-family: 'Bota-Bold', Georgia, 'Times New Roman', Times, serif;
 
 }
@@ -297,8 +297,8 @@ ImgDiv width: von 20 auf 46%
 
 .ColorCircle{
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     border-radius: 1000px;
     float: left;
     margin-right: 20px;
