@@ -17,7 +17,6 @@ function Hide(Hide, ShowObj, WhatToDo) {
             document.getElementById("Unterbrust").style.transition = "background-color 500ms";
             document.getElementById("Unterbrust").style.backgroundColor = "white";
             document.getElementById("ErrorUnter").style.opacity = "0";
-
         }, 1000);
         return;
     }
@@ -142,6 +141,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
     setTimeout(() => {
 
         elementHide.style.visibility = "hidden";
+        elementHide.style.display = "none";
         currentScene = ShowObj;
         Show(ShowObj);
         // console.log("current scene is: " + currentScene);
@@ -235,6 +235,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
 
 function Show(Show) {
     elementShow = document.getElementById(Show);
+    elementShow.style.display = "block";
     elementShow.style.opacity = "1";
     elementShow.style.transition = "opacity 500ms";
     elementShow.style.visibility = "visible";
@@ -522,15 +523,27 @@ function BrustInfo(Info) {
 }
 
 
-
+var bigSize;
+var smallSize;
 function OpenArticle(Nr) {
+    if(window.screen.availableWidth>1200){
+        smallSize = "10%";
+        bigSize = "60%";
+        
+    }
+    else{
+        smallSize = "17%";
+        bigSize = "75%";
+    }
+
+
     article = document.getElementById(Nr);
     info = article.querySelector('.Info');
     ImgDiv = article.querySelector('.ImgDiv');
     PreVis = ImgDiv.querySelector('.PreVis');
     ShopImage = document.getElementById("ShopImage");
-    if (article.style.height != "75%") {
-        article.style.height = "75%";
+    if (article.style.height != bigSize) {
+        article.style.height = bigSize;
         info.style.minHeight = "24%"
         ImgDiv.style.width = "46%";
         ShopImage.src = 'Bilder/RenderProdukt.png';
@@ -550,7 +563,7 @@ function OpenArticle(Nr) {
     }
     else {
         ShopImage.src = 'Bilder/Render.png';
-        article.style.height = "17%";
+        article.style.height = smallSize;
         info.style.minHeight = "100%"
         ImgDiv.style.width = "20%";
         switch (Nr) {
@@ -576,7 +589,7 @@ function OpenArticle(Nr) {
          ImgDiv = article.querySelector('.ImgDiv');
          PreVis = ImgDiv.querySelector('.PreVis');
 
-         article.style.height = "17%";
+         article.style.height = smallSize;
         info.style.minHeight = "100%"
         ImgDiv.style.width = "20%";
         }

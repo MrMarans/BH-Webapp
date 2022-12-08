@@ -90,6 +90,7 @@ p {
 
 #Unterbrustumfang,
 #Oberbrustweite {
+    display: block;
     position: absolute;
     padding-top: 10%;
     margin: auto;
@@ -165,7 +166,7 @@ p {
     opacity: 0;
     transition: opacity 500ms;
     visibility: hidden;
-    border-radius: 10%;
+    border-radius: 5vh;
     background-color: #E6E6E6;
     right: 3%;
     top: 5%;
@@ -198,7 +199,7 @@ p {
 
 .Artikel{
     position: relative;
-    border-radius: 3%;
+    border-radius: 1.5vh;
     background-color: white;
     margin: 3%;
     height: 17%;
@@ -355,6 +356,9 @@ form {
     h1{
        font-size:  2.6em;
     }
+    h2{
+        font-size: 2.3em;
+    }
     p{
         font-size: 2em;
     }
@@ -388,5 +392,20 @@ form {
     }
     #Img2{
         height: 40vh;
+    }
+
+    #Img4{
+        height: 25%;
+    }
+    #Shop{
+        display: none;
+    }
+
+    #BH-Finder{
+        position: absolute;
+        top: 7vh;
+        width: 90%;
+        right: 5%;
+
     }
 }
