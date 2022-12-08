@@ -138,6 +138,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
     }
     elementHide.style.opacity = "0";
     elementHide.style.transition = "opacity 500ms";
+    document.getElementById(ShowObj).style.display = "block";
     setTimeout(() => {
 
         elementHide.style.visibility = "hidden";
@@ -235,7 +236,6 @@ function Hide(Hide, ShowObj, WhatToDo) {
 
 function Show(Show) {
     elementShow = document.getElementById(Show);
-    elementShow.style.display = "block";
     elementShow.style.opacity = "1";
     elementShow.style.transition = "opacity 500ms";
     elementShow.style.visibility = "visible";
