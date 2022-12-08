@@ -12,7 +12,8 @@ function Hide(Hide, ShowObj, WhatToDo) {
     if (Hide == "Unterbrustumfang" && (document.getElementById("Unterbrust").value == null || document.getElementById("Unterbrust").value < 63 || document.getElementById("Unterbrust").value > 97)) {
         //console.log("ShowRed");
         document.getElementById("Unterbrust").style.backgroundColor = "#74afb0";
-        document.getElementById("ErrorUnter").style.opacity = "1";
+        if(window.screen.availWidth>1200){
+        document.getElementById("ErrorUnter").style.opacity = "1";}
         setTimeout(() => {
             document.getElementById("Unterbrust").style.transition = "background-color 500ms";
             document.getElementById("Unterbrust").style.backgroundColor = "white";
@@ -24,7 +25,8 @@ function Hide(Hide, ShowObj, WhatToDo) {
         //console.log("ShowRed");
 
         document.getElementById("Oberbrust").style.backgroundColor = "#74afb0";
-        document.getElementById("ErrorOber").style.opacity = "1";
+        if(window.screen.availWidth>1200){
+        document.getElementById("ErrorOber").style.opacity = "1";}
         setTimeout(() => {
             document.getElementById("Oberbrust").style.transition = "background-color 500ms";
             document.getElementById("Oberbrust").style.backgroundColor = "white";
