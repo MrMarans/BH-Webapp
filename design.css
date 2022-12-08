@@ -348,7 +348,7 @@ form {
 
 
 
-@media screen (max-width: 700px){
+@media screen (device-width: 700px) and (orientation: portrait){
     #StartDiv{
         padding-top: 45%;
     }
