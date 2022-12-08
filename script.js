@@ -25,10 +25,11 @@ function Hide(Hide, ShowObj, WhatToDo) {
         //console.log("ShowRed");
 
         document.getElementById("Oberbrust").style.backgroundColor = "#74afb0";
+        document.getElementById("ErrorOber").style.opacity = "1";
         setTimeout(() => {
             document.getElementById("Oberbrust").style.transition = "background-color 500ms";
             document.getElementById("Oberbrust").style.backgroundColor = "white";
-
+            document.getElementById("ErrorOber").style.opacity = "0";
         }, 500);
         return;
     }
