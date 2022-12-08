@@ -27,6 +27,43 @@
             <p class="TextInButton">Start</p>
         </button>
     </div>
+  <!-- Unterbrust -->
+  
+  <div id="Unterbrustumfang">
+
+
+    <h1>Schritt 1: Der Unterbrustumfang</h1>
+    <br>
+    <p>Messen Sie zunächst Ihren Unterbrustumfang</p>
+    <p>
+
+        Der Unterbrustumfang misst sich direkt unter der Brust. Messen Sie diesen Wert und geben Sie diesen anschließend in das Textfeld ein.</p>
+    <form style="margin-top: 50px;" onsubmit="Hide('Unterbrustumfang','Oberbrustweite', 'Gif2'); BrustInfo('Unterbrust'); return false;">
+        <input type="number" id="Unterbrust" placeholder="Weite in cm"/><p class="ErrorText" id="ErrorUnter">Nur Werte zwischen 63 und 97 werden akzeptiert. </p>
+    </form>
+<!--    <button onclick="Hide('Unterbrustumfang','Oberbrustweite', 'Gif2'); BrustInfo('Unterbrust');">
+        <p class="TextInButton">Eingabe festlegen</p>
+    </button>
+-->
+</div>
+
+<!-- Oberbrust -->
+
+<div id="Oberbrustweite">
+    <h1>Schritt 2: Der Brustumfang </h1>
+    <br>
+    <p>Messen Sie nun Ihren Brustumfang.</p>
+    <p>
+
+        Der Brustumfang misst sich horizontal auf der Höhe der Brustspitzen. Messen Sie diesen Wert und geben Sie diesen anschließend in das Textfeld ein.</p>
+
+    <form style="margin-top: 50px;" onsubmit="Hide('Oberbrustweite', 'Ergebnis', 'hide'); BrustInfo('Oberbrust'); return false;">
+        <input type="number" id="Oberbrust" placeholder="Weite in cm" maxlength="3"><p class="ErrorText" id="ErrorOber">Nur Werte zwischen 77 und 121 werden akzeptiert. </p>
+    </form>
+  <!--  <button onclick="Hide('Oberbrustweite', 'Ergebnis', 'hide'); BrustInfo('Oberbrust');">
+        <p class="TextInButton">Eingabe festlegen</p>
+    </button>-->
+</div>
 
     <!-- VIDEOS -->
 
@@ -39,44 +76,10 @@
     </video>
   
   
-  <!-- Unterbrust -->
-  
-    <div id="Unterbrustumfang">
 
 
-        <h1>Schritt 1: Der Unterbrustumfang</h1>
-        <br>
-        <p>Messen Sie zunächst Ihren Unterbrustumfang</p>
-        <p>
 
-            Der Unterbrustumfang misst sich direkt unter der Brust. Messen Sie diesen Wert und geben Sie diesen anschließend in das Textfeld ein.</p>
-        <form style="margin-top: 50px;" onsubmit="Hide('Unterbrustumfang','Oberbrustweite', 'Gif2'); BrustInfo('Unterbrust'); return false;">
-            <input type="number" id="Unterbrust" placeholder="Weite in cm"/><p class="ErrorText" id="ErrorUnter">Nur Werte zwischen 63 und 97 werden akzeptiert. </p>
-        </form>
-    <!--    <button onclick="Hide('Unterbrustumfang','Oberbrustweite', 'Gif2'); BrustInfo('Unterbrust');">
-            <p class="TextInButton">Eingabe festlegen</p>
-        </button>
-    -->
-    </div>
-
-
-    <!-- Oberbrust -->
-
-    <div id="Oberbrustweite">
-        <h1>Schritt 2: Der Brustumfang </h1>
-        <br>
-        <p>Messen Sie nun Ihren Brustumfang.</p>
-        <p>
-
-            Der Brustumfang misst sich horizontal auf der Höhe der Brustspitzen. Messen Sie diesen Wert und geben Sie diesen anschließend in das Textfeld ein.</p>
-
-        <form style="margin-top: 50px;" onsubmit="Hide('Oberbrustweite', 'Ergebnis', 'hide'); BrustInfo('Oberbrust'); return false;">
-            <input type="number" id="Oberbrust" placeholder="Weite in cm" maxlength="3"><p class="ErrorText" id="ErrorOber">Nur Werte zwischen 77 und 121 werden akzeptiert. </p>
-        </form>
-      <!--  <button onclick="Hide('Oberbrustweite', 'Ergebnis', 'hide'); BrustInfo('Oberbrust');">
-            <p class="TextInButton">Eingabe festlegen</p>
-        </button>-->
-    </div>
+    
 
 
     <!-- Ergebnis -->

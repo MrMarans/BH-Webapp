@@ -243,11 +243,12 @@ function Show(Show) {
     var img;
     switch (Show) {
         case "Unterbrustumfang":
-
+            if(window.screen.availWidth>1200){
             img = document.getElementById("Img3");
             img.style.opacity = "1";
             img.style.transition = "opacity 500ms";
-            break
+            }
+            break;
         case "Ergebnis":
             img = document.getElementById("Img4");
             img.style.opacity = "1";
