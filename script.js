@@ -18,7 +18,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
             document.getElementById("Unterbrust").style.backgroundColor = "white";
             document.getElementById("ErrorUnter").style.opacity = "0";
 
-        }, 500);
+        }, 1000);
         return;
     }
     if (Hide == "Oberbrustweite" && (document.getElementById("Oberbrust").value == null || document.getElementById("Oberbrust").value < 77 || document.getElementById("Oberbrust").value > 121)) {
