@@ -39,7 +39,7 @@
 
         Der Unterbrustumfang misst sich direkt unter der Brust. Messen Sie diesen Wert und geben Sie diesen anschließend in das Textfeld ein.</p>
     <form style="margin-top: 50px;" onsubmit="Hide('Unterbrustumfang','Oberbrustweite', 'Gif2'); BrustInfo('Unterbrust'); return false;">
-        <input type="number" id="Unterbrust" placeholder="Weite in cm"/><p class="ErrorText" id="ErrorUnter">Wert zu hoch oder zu niedrig</p>
+        <input type="number" id="Unterbrust" placeholder="Weite in cm"/><p class="ErrorText" id="ErrorUnter" style="z-index: 500;">Wert zu hoch oder zu niedrig</p>
     </form>
 <!--    <button onclick="Hide('Unterbrustumfang','Oberbrustweite', 'Gif2'); BrustInfo('Unterbrust');">
         <p class="TextInButton">Eingabe festlegen</p>
@@ -58,7 +58,7 @@
         Der Brustumfang misst sich horizontal auf der Höhe der Brustspitzen. Messen Sie diesen Wert und geben Sie diesen anschließend in das Textfeld ein.</p>
 
     <form style="margin-top: 50px;" onsubmit="Hide('Oberbrustweite', 'Ergebnis', 'hide'); BrustInfo('Oberbrust'); return false;">
-        <input type="number" id="Oberbrust" placeholder="Weite in cm" maxlength="3"><p class="ErrorText" id="ErrorOber">Wert zu hoch oder zu niedrig. </p>
+        <input type="number" id="Oberbrust" placeholder="Weite in cm" maxlength="3"><p class="ErrorText" id="ErrorOber" style="z-index: 500;">Wert zu hoch oder zu niedrig. </p>
     </form>
   <!--  <button onclick="Hide('Oberbrustweite', 'Ergebnis', 'hide'); BrustInfo('Oberbrust');">
         <p class="TextInButton">Eingabe festlegen</p>
