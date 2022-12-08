@@ -348,7 +348,7 @@ form {
 
 
 
-@media screen and (min-width : 200px) and (max-width : 1024px){
+@media screen and (min-width : 300px) and (max-width: 1200px){ 
     #StartDiv{
         padding-top: 45%;
     }
@@ -376,7 +376,7 @@ form {
         padding-top: 15%;
     }
 
-    #Gif1{
+    #Gif1, #Gif2{
         left:35%;
         bottom:12%;
         width: 35%;
