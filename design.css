@@ -378,9 +378,11 @@ form {
         text-align: center;
         padding-left: 0;
         padding-top: 15%;
+        display: none;
     }
 
     #Gif1, #Gif2{
+        position: relative;
         left:35%;
         bottom:12%;
         width: 35%;
