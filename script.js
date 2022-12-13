@@ -201,6 +201,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
             gif1.style.visibility = "visible";
             gif1.style.opacity = "1";
             gif1.style.transition = "opacity 500ms";
+            gif1.style.display ="block";
         }, 500);
     }
     if (WhatToDo == "Gif2") {
@@ -209,9 +210,11 @@ function Hide(Hide, ShowObj, WhatToDo) {
         setTimeout(() => {
             //  console.log("Gif2Show");
             gif1.style.visibility = "hidden";
+            gif1.style.display ="none";
             gif2.style.visibility = "visible";
             gif2.style.opacity = "1";
             gif2.style.transition = "opacity 500ms";
+            gif2.style.display ="block";
         }, 500);
     }
     if(WhatToDo=="Render")

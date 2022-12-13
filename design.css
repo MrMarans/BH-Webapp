@@ -377,7 +377,7 @@ form {
         margin-right: auto;
         text-align: center;
         padding-left: 0;
-        padding-top: 15%;
+        padding-top: 35%;
         display: none;
     }
 
@@ -388,7 +388,7 @@ form {
         margin-right: auto;
         left: unset;
         top: unset;
-
+        width: 40%;
     }
  
     #Img1{
