@@ -381,12 +381,14 @@ form {
         display: none;
     }
 
-    #Gif1, #Gif2{
+    .vid{
+        display: flex;
         position: relative;
-        left:35%;
-        bottom:12%;
-        width: 35%;
-        top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        left: unset;
+        top: unset;
+        
     }
  
     #Img1{
