@@ -349,7 +349,7 @@ form {
 
 
 
-@media screen and (min-width : 300px) and (max-width: 400px){ 
+@media screen and (min-width : 300px) and (max-width: 500px){ 
     #StartDiv{
         padding-top: 45%;
     }
