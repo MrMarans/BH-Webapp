@@ -231,6 +231,7 @@ function Hide(Hide, ShowObj, WhatToDo) {
         setTimeout(() => {
             gif1.style.visibility = "hidden";
             gif2.style.visibility = "hidden";
+            gif2.style.display ="none";
             //  console.log("Gif2Hide");
         }, 500);
     }

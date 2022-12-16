@@ -21,9 +21,13 @@ h3{
     position: absolute;
     top: 13px;
     left: 20px;
-    height: 80px;
+    height: 4vw;
     width: auto;
     z-index: 600;
+}
+
+img{
+    mix-blend-mode: color-burn ;
 }
 
 #Img1{
@@ -390,6 +394,10 @@ form {
         top: unset;
         width: 40%;
     }
+
+    #Ergebnis{
+        padding-top: 42.5%;
+    }
  
     #Img1{
     height: 21vh;
@@ -402,14 +410,24 @@ form {
         height: 25%;
     }
     #Shop{
-        display: none;
+        display: block;
+        position: relative;
     }
 
     #BH-Finder{
-        position: absolute;
-        top: 7vh;
         width: 90%;
-        right: 5%;
+        margin-top: 3vw;
+        height: 1200px;
+        left: unset;
+        top: unset;
+
+    }
+
+    .ShopImage{
+        position: relative;
+        left: unset;
+        top: unset;
+        -webkit-transform: unset unset;
 
     }
 }
