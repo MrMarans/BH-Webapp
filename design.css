@@ -26,9 +26,7 @@ h3{
     z-index: 600;
 }
 
-img{
-    mix-blend-mode: color-burn ;
-}
+
 
 #Img1{
     position: absolute;
@@ -63,6 +61,11 @@ img{
     opacity: 0;
 }
 
+#Img1 #Img2 #Img3 #Img4 #Logo{
+
+        mix-blend-mode: color-burn ;
+
+}
 
 p {
     font-family: 'CircularXXSub-RegularSubset', Helvetica, Corbel, Arial, sans-serif;
@@ -353,7 +356,7 @@ form {
 
 
 
-@media screen and  (orientation:portrait){ 
+@media screen and  (orientation:portrait){  
     #StartDiv{
         padding-top: 45%;
     }
@@ -410,14 +413,13 @@ form {
         height: 25%;
     }
     #Shop{
-        display: block;
-        position: relative;
+        display: none;
     }
 
     #BH-Finder{
         width: 90%;
-        margin-top: 3vw;
-        height: 1200px;
+        margin-top: 7vw;
+        height: 140vw;
         left: unset;
         top: unset;
 
